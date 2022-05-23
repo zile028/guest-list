@@ -14,6 +14,9 @@ function App() {
   const [load, setLoad] = useState(false);
 
   useEffect(() => {
+    // ovde sam dodao setTimeout da bi se video info o loading-u podataka
+    // ako ga izbacim nece se videti jer bas brzo preuzima podatke i ne stigne se prikazati
+    // u finalnoj verziji moze se i izbaciti
     setTimeout(() => {
       loading()
         .then((res) => setAllGuests(res))
